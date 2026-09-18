@@ -56,7 +56,7 @@ osint-ai  --(aday: görüntü + gerekçe + güven)-->  platform (gt-ops.reviews)
 
 - **`platform`** sinyalleri toplar ve inceleme kuyruğunu işletir. Bu depo **yeni bir kuyruk açmaz**; adaylarını o kuyruğa yazar. Şema `platform/db/migrations/ops` içindedir.
 - **`datasets`** doğrulanmış kayıtları tutar. Bir aday ancak iki insan kapısından geçtikten sonra kayda dönüşür.
-- **`handbook`** kuralların kaynağıdır. Bu deponun kendisi ve buradaki yapay zekâ kuralları [ADR 0017](https://github.com/Greater-Turkiye/handbook/blob/main/decisions/0017-osint-ai-repository.md) ile önerilmiştir.
+- **`handbook`** kuralların kaynağıdır. Bu deponun kendisi ve buradaki yapay zekâ kuralları [ADR 0017](https://github.com/Greater-Turkiye/handbook/pull/13) ile **önerilmiştir; henüz kabul edilmedi.**
 
 ### Kurulum ve çalıştırma
 
@@ -131,7 +131,7 @@ osint-ai  --(candidate: tile + reason + confidence)-->  platform (gt-ops.reviews
 
 - **`platform`** collects signals and runs the review queue. This repository **does not open a second queue**; it writes candidates into that one. The schema lives in `platform/db/migrations/ops`.
 - **`datasets`** holds verified records. A candidate becomes a record only after both human gates.
-- **`handbook`** is the authority for the rules. This repository and its AI rules are proposed in [ADR 0017](https://github.com/Greater-Turkiye/handbook/blob/main/decisions/0017-osint-ai-repository.md).
+- **`handbook`** is the authority for the rules. This repository and its AI rules are **proposed, not yet accepted**, in [ADR 0017](https://github.com/Greater-Turkiye/handbook/pull/13).
 
 ### Install and run
 

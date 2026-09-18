@@ -1,6 +1,6 @@
 # Architecture
 
-> **EN/TR:** Bu belge İngilizcedir; özeti ve kararları [README](README.md) ve [ADR 0017](https://github.com/Greater-Turkiye/handbook/blob/main/decisions/0017-osint-ai-repository.md) Türkçe özetler.
+> **EN/TR:** Bu belge İngilizcedir; özeti ve kararları [README](README.md) ve [ADR 0017 (önerildi)](https://github.com/Greater-Turkiye/handbook/pull/13) Türkçe özetler.
 >
 > **Status: proposal.** Nothing below stage 0 is implemented. Every number is arithmetic from
 > geometry and published throughput figures, not a measurement of our own system. Where a
