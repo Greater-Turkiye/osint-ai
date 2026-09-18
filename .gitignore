@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+dist/
+build/
+coverage/
+
+# Environment and secrets (nothing here should need one; this is a belt-and-braces guard)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Imagery and model artefacts must never be committed (DATA.md §4).
+# We publish derived features and links, never pixels or weights.
+*.tif
+*.tiff
+*.jp2
+*.png
+*.jpg
+*.jpeg
+*.npy
+*.npz
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.onnx
+tiles/
+imagery/
+cache/
+models/
+
+# Local data and scratch output
+*.sqlite
+*.sqlite3
+*.db
+/out/
+/scratch/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

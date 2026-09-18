@@ -1,0 +1,53 @@
+name: ci
+
+# Lint and test the Python package. No schedule and no deployment: nothing in this repository
+# runs on its own yet (ADR 0008 — zero budget, and ADR 0017 — this repository is design stage).
+# Network tests are deselected so CI never depends on a third party's best-effort API.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install
+        run: python -m pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          python -m ruff check .
+          python -m ruff format --check .
+      - name: Tests (the red-line tests are mandatory and are never skipped)
+        run: python -m pytest -m "not network"
+      - name: The red-line gate refuses Türkiye and is not merely present
+        run: |
+          set -e
+          # An area over Ankara must exit 2 (refused), not 0 (allowed) and not 1 (error).
+          set +e
+          python -m gt_osint_ai scenes --bbox 32.6,39.7,33.1,40.1 --from 2025-06-01 --to 2025-06-30
+          code=$?
+          set -e
+          if [ "$code" -ne 2 ]; then
+            echo "::error::the red-line gate did not refuse an area over Türkiye (exit $code, expected 2)"
+            exit 1
+          fi
+          echo "the gate refused it, as it must"

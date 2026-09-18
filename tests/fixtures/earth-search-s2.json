@@ -1,0 +1,171 @@
+{
+  "type": "FeatureCollection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [],
+  "context": {
+    "limit": 3,
+    "matched": 68,
+    "returned": 3
+  },
+  "numberMatched": 68,
+  "numberReturned": 3,
+  "features": [
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [],
+      "id": "S2B_36SUB_20250629_0_L2A",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.84897383752582,
+              33.420909931215405
+            ],
+            [
+              30.87278016320144,
+              32.43207273207243
+            ],
+            [
+              31.768917525516628,
+              32.44456327625565
+            ],
+            [
+              32.03104144118748,
+              33.308957823117765
+            ],
+            [
+              32.029634285481876,
+              33.435769695858674
+            ],
+            [
+              30.84897383752582,
+              33.420909931215405
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        30.848974,
+        32.432073,
+        32.031041,
+        33.43577
+      ],
+      "properties": {
+        "platform": "sentinel-2b",
+        "constellation": "sentinel-2",
+        "instruments": [
+          "msi"
+        ],
+        "eo:cloud_cover": 22.875899,
+        "proj:epsg": 32636,
+        "grid:code": "MGRS-36SUB",
+        "datetime": "2025-06-29T08:51:07.307000Z"
+      },
+      "collection": "sentinel-2-l2a"
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [],
+      "id": "S2B_36SUC_20250629_0_L2A",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.826231034002205,
+              34.32235671057083
+            ],
+            [
+              30.85114337978581,
+              33.33277630652224
+            ],
+            [
+              32.03061373593127,
+              33.34758667242361
+            ],
+            [
+              32.01936680178338,
+              34.33772750342932
+            ],
+            [
+              30.826231034002205,
+              34.32235671057083
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        30.826231,
+        33.332776,
+        32.030614,
+        34.337728
+      ],
+      "properties": {
+        "platform": "sentinel-2b",
+        "constellation": "sentinel-2",
+        "instruments": [
+          "msi"
+        ],
+        "eo:cloud_cover": 25.230709,
+        "proj:epsg": 32636,
+        "grid:code": "MGRS-36SUC",
+        "datetime": "2025-06-29T08:50:53.208000Z"
+      },
+      "collection": "sentinel-2-l2a"
+    },
+    {
+      "type": "Feature",
+      "stac_version": "1.0.0",
+      "stac_extensions": [],
+      "id": "S2A_36SUC_20250626_1_L2A",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              30.826231034002205,
+              34.32235671057083
+            ],
+            [
+              30.85114337978581,
+              33.33277630652224
+            ],
+            [
+              32.03061373593127,
+              33.34758667242361
+            ],
+            [
+              32.01936680178338,
+              34.33772750342932
+            ],
+            [
+              30.826231034002205,
+              34.32235671057083
+            ]
+          ]
+        ]
+      },
+      "bbox": [
+        30.826231,
+        33.332776,
+        32.030614,
+        34.337728
+      ],
+      "properties": {
+        "platform": "sentinel-2a",
+        "constellation": "sentinel-2",
+        "instruments": [
+          "msi"
+        ],
+        "eo:cloud_cover": 29.449305,
+        "proj:epsg": 32636,
+        "grid:code": "MGRS-36SUC",
+        "datetime": "2025-06-26T08:51:06.368000Z"
+      },
+      "collection": "sentinel-2-l2a"
+    }
+  ]
+}

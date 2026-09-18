@@ -1,0 +1,34 @@
+# Areas of interest for imagery passes.
+#
+# Nothing here is enabled. An area becomes `enabled: true` only after a maintainer has read
+# DATA.md, confirmed the collection's licence, and confirmed that the box is clear of the
+# Türkiye geofence — which `gt-osint-ai areas` also checks, and refuses to load if it is not.
+#
+# The scope is outward-looking (handbook tr/01-mission-scope.md). Boxes are drawn around
+# publicly reported infrastructure in the neighbourhood, never around Turkish territory and
+# never around anything that would put a Turkish unit in the frame.
+#
+# bbox order is west, south, east, north — the order STAC and GeoJSON both use.
+
+areas:
+  - id: aoi-example-east-med
+    name: Example open-sea box, eastern Mediterranean (placeholder, not a real target)
+    bbox: [32.0, 33.2, 33.0, 33.9]
+    collection: sentinel-2-l2a
+    max_cloud: 40
+    cadence_days: 5
+    enabled: false
+    notes: >-
+      Placeholder so the configuration loader and its tests have something to read. It sits in
+      open water south of Cyprus, well clear of the 25 nm Türkiye geofence. Replace it with a
+      reviewed area before anything is enabled.
+
+  - id: aoi-example-radar
+    name: Example radar box, same area (Sentinel-1, cloud-independent)
+    bbox: [32.0, 33.2, 33.0, 33.9]
+    collection: sentinel-1-grd
+    cadence_days: 12
+    enabled: false
+    notes: >-
+      The same box on radar, to show that a cloud filter does not apply to Sentinel-1 and that
+      revisit time differs by mission. Also a placeholder.
