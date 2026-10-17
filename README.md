@@ -164,3 +164,9 @@ refusal**. `2` is deliberately distinct so a refusal can never be read as "no re
 Code is [MIT](LICENSE); documentation and data are [CC BY 4.0](LICENSE-DATA)
 ([ADR 0009](https://github.com/Greater-Turkiye/handbook/blob/main/decisions/0009-licensing.md)).
 Third-party imagery licences are recorded one by one in [DATA.md](DATA.md).
+
+## Issues
+
+Issues here are worked by Claude Code in GitHub Actions through the org-wide workflow ([Greater-Turkiye/.github](https://github.com/Greater-Turkiye/.github#issues-are-worked-by-claude), called from `.github/workflows/claude.yml`): a new issue is assigned to the owner and resolved end to end; the `claude` label or an `@claude` comment starts it again. Only people with write access can start it.
+
+Buradaki issue'lar GitHub Actions içinde Claude Code tarafından çözülür: yeni issue sahibine atanır ve baştan sona çözülür; `claude` etiketi ya da `@claude` yorumu yeniden başlatır.
